@@ -20,6 +20,6 @@ CREATE TABLE workouts (
 
 CREATE TABLE bookings (
   id SERIAL PRIMARY KEY,
-  member_id INT references members(id),
-  workout_id INT references workouts(id)
+  member_id INT references members(id) ON DELETE CASCADE,
+  workout_id INT references workouts(id) ON DELETE CASCADE
 );

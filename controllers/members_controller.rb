@@ -36,7 +36,6 @@ end
 #DELETE CLIENT
 post '/members/:id/delete' do
   member = Member.find(params[:id])
-  Booking.delete()
   member.delete()
   redirect ('/members')
 end
