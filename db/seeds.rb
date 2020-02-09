@@ -83,25 +83,29 @@ workout4 = Workout.new({
   })
 workout4.save()
 
-  booking1 = Booking.new({
-      "workout_id" => workout1.id,
-      "member_id" => member2.id
-    })
+booking1 = Booking.new({
+    "workout_id" => workout1.id,
+    "member_id" => member2.id
+  })
+booking1.save()
 
-  booking2 = Booking.new({
-      "workout_id" => workout2.id,
-      "member_id" => member1.id
-    })
+booking2 = Booking.new({
+    "workout_id" => workout2.id,
+    "member_id" => member1.id
+  })
+booking2.save()
 
-  booking3 = Booking.new({
-      "workout_id" => workout3.id,
-      "member_id" => member4.id
-    })
+booking3 = Booking.new({
+    "workout_id" => workout3.id,
+    "member_id" => member4.id
+  })
+booking3.save()
 
-  booking1 = Booking.new({
-      "workout_id" => workout4.id,
-      "member_id" => member6.id
-    })
+booking1 = Booking.new({
+    "workout_id" => workout4.id,
+    "member_id" => member6.id
+  })
+booking4.save()
 
 binding.pry
 nil
