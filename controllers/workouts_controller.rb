@@ -18,3 +18,14 @@ post '/workouts' do
   workout.save()
   redirect ('/workouts')
 end
+
+get '/workouts/:id/edit' do
+  @workout = Workout.find(params[:id])
+  erb(:"/workouts/edit")
+end
+
+post '/workouts/:id' do
+  workout = Workout.new(params)
+  workout.update
+  redirect ('/workouts')
+end
