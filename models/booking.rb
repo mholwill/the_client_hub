@@ -27,7 +27,8 @@ class Booking
   end
 
   def self.delete_all
-    sql = "DELETE FROM "
+    sql = "DELETE FROM bookings"
+    SqlRunner.run(sql)
   end
 
 

@@ -3,6 +3,10 @@ require_relative('../models/member')
 require_relative('../models/workout')
 require_relative('../models/booking')
 
+Booking.delete_all()
+Workout.delete_all()
+Member.delete_all()
+
 member1 = Member.new({
     "first_name" => "Malcolm",
     "last_name" => "Holwill",
@@ -101,7 +105,7 @@ booking3 = Booking.new({
   })
 booking3.save()
 
-booking1 = Booking.new({
+booking4 = Booking.new({
     "workout_id" => workout4.id,
     "member_id" => member6.id
   })

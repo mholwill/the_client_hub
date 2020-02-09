@@ -32,6 +32,10 @@ class Member
 
 
 
+  def self.delete_all
+    sql = "DELETE FROM members"
+    SqlRunner.run(sql)
+  end
 
   def self.map_items(member_data)
     result = member_data.map { |member| Member.new(member) }

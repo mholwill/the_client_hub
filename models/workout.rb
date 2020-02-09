@@ -30,6 +30,11 @@ class Workout
     @id = results.first()['id'].to_i
   end
 
+  def self.delete_all
+    sql = "DELETE FROM workouts"
+    SqlRunner.run(sql)
+  end
+
 
   def self.map_items(workout_data)
     result = workout_data.map { |workout| Workout.new(workout) }
