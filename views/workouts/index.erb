@@ -7,5 +7,8 @@
   <p>Capacity: <%= workout.capacity %></p>
   <p><a href="/workouts/<%= workout.id %>/edit">Edit Class</a></p>
   <p><a href="/workouts/<%= workout.id %>/members">Members taking part</a></p>
+  <form method="post" action="/workouts/<%= workout.id %>/delete" >
+    <input type="submit" value="Delete Workout">
+  </form>
   <hr />
 <% end %>

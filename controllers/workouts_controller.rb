@@ -34,3 +34,9 @@ post '/workouts/:id' do
   workout.update
   redirect ('/workouts')
 end
+
+post '/workouts/:id/delete' do
+  workout = Workout.find(params[:id])
+  workout.delete()
+  redirect ('/workouts')
+end

@@ -57,6 +57,13 @@ class Workout
    return Member.map_items(member_data)
   end
 
+  def delete()
+    sql = "DELETE FROM workouts
+    WHERE id = $1"
+    value = [@id]
+    SqlRunner.run(sql,value)
+  end
+
   def self.all()
     sql = "SELECT * FROM workouts"
     workouts = SqlRunner.run(sql)
