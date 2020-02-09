@@ -1,1 +1,8 @@
-<h1>TEST MEMBERS</h1>
+<h1>MEMBERS</h1>
+
+<% @members.each do |member| %>
+<p>Name: <%= member.first_name %> <%= member.last_name %></p>
+<p>Age: <%= member.age %></p>
+<p>Goal: <%= member.goal %></p>
+<hr />
+<% end %>

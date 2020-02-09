@@ -5,5 +5,6 @@ also_reload( '../models/*' )
 
 
 get '/workouts' do
+  @workouts = Workout.all()
   erb(:"workouts/index")
 end

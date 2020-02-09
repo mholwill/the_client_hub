@@ -7,7 +7,7 @@ class Workout
 
   def initialize(options)
     @id = options['id'] if options['id']
-    @name = options['id']
+    @name = options['name']
     @type = options['type']
     @trainer = options['trainer']
     @capacity = options['capacity'].to_i

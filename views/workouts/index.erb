@@ -1,1 +1,9 @@
-<h1>TEST WORKOUTS</h1>
+<h1>WORKOUTS</h1>
+
+<% @workouts.each do |workout| %>
+  <p>Name: <%= workout.name %></p>
+  <p>Type: <%= workout.type %></p>
+  <p>Trainer: <%= workout.trainer %></p>
+  <p>Capacity: <%= workout.capacity %></p>
+  <hr />
+<% end %>
