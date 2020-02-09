@@ -5,5 +5,5 @@ require_relative('controllers/workouts_controller')
 require_relative('controllers/bookings_controller')
 
 get '/' do
-  erb( :index )
+  erb(:index)
 end
