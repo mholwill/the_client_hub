@@ -19,6 +19,11 @@ post '/workouts' do
   redirect ('/workouts')
 end
 
+get '/workouts/:id/members' do
+  @workout = Workout.find(params[:id])
+  erb(:"workouts/members_booked")
+end
+
 get '/workouts/:id/edit' do
   @workout = Workout.find(params[:id])
   erb(:"/workouts/edit")

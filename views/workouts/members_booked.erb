@@ -1,0 +1,11 @@
+<h1>Workout <%= @workout.name %></h1>
+
+<p>Type: <%= @workout.type %></p>
+
+<h3ś>Members booked:</h3>
+
+<ul>
+  <% @workout.members_booked.each do |member| %>
+  <li><%= member.first_name %></li>
+  <% end %>
+</ul>

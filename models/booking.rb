@@ -26,6 +26,13 @@ class Booking
     @id = results.first()['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM bookings
+    WHERE id = $1"
+    value = [@id]
+    SqlRunner.run(sql,value)
+  end
+
   def self.all()
     sql = "SELECT * FROM bookings"
     bookings = SqlRunner.run(sql)

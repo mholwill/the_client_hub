@@ -47,11 +47,20 @@ class Workout
     SqlRunner.run(sql,values)
   end
 
+  def members_booked()
+    sql = "SELECT members.* FROM members
+   INNER JOIN bookings
+   ON bookings.member_id = members.id
+   WHERE workout_id = $1"
+   value = [@id]
+   member_data = SqlRunner.run(sql,value)
+   return Member.map_items(member_data)
+  end
+
   def self.all()
     sql = "SELECT * FROM workouts"
     workouts = SqlRunner.run(sql)
     return Workout.map_items(workouts)
-
   end
 
   def self.delete_all
