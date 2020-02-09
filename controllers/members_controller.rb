@@ -13,7 +13,20 @@ get '/members/new' do
 end
 
 post '/members' do
-  order = Member.new(params)
-  order.save()
+  member = Member.new(params)
+  member.save()
+  redirect ('/members')
+end
+
+
+
+get "/members/:id/edit" do
+  @member = Member.find(params[:id])
+  erb(:"members/edit")
+end
+
+post '/members/:id' do
+  member = Member.new(params)
+  member.update
   redirect ('/members')
 end

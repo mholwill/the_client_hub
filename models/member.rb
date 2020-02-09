@@ -64,6 +64,14 @@ class Member
     SqlRunner.run(sql)
   end
 
+  def self.find(id)
+   sql = "SELECT * FROM members WHERE id = $1"
+   values = [id]
+   member = SqlRunner.run(sql, values)
+   result = Member.new(member.first)
+   return result
+ end
+
   def self.map_items(member_data)
     result = member_data.map { |member| Member.new(member) }
     return result
