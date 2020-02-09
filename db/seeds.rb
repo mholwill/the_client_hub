@@ -9,6 +9,7 @@ member1 = Member.new({
     "age" => 32,
     "goal" => "To build muscle"
   })
+member1.save()
 
 member2 = Member.new({
     "first_name" => "Charlie",
@@ -16,6 +17,7 @@ member2 = Member.new({
     "age" => 28,
     "goal" => "Lose Weight"
   })
+member2.save()
 
 member3 = Member.new({
     "first_name" => "Graham",
@@ -23,6 +25,7 @@ member3 = Member.new({
     "age" => 21,
     "goal" => "To improve fitness"
   })
+member3.save()
 
 member4 = Member.new({
     "first_name" => "Robert",
@@ -30,6 +33,7 @@ member4 = Member.new({
     "age" => 52,
     "goal" => "To build muscle and stay fit"
   })
+member4.save()
 
 member5 = Member.new({
     "first_name" => "Alison",
@@ -37,6 +41,7 @@ member5 = Member.new({
     "age" => 57,
     "goal" => "To improve flexability and weightloss"
   })
+member5.save()
 
 member6 = Member.new({
     "first_name" => "Tommy",
@@ -44,6 +49,7 @@ member6 = Member.new({
     "age" => 19,
     "goal" => "To build muscle"
   })
+member6.save()
 
   workout1 = Workout.new({
       "name" => "Fit in 30",
