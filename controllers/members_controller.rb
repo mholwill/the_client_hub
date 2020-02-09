@@ -8,6 +8,8 @@ get '/members' do
   erb(:"members/index")
 end
 
+
+#NEW CLIENT
 get '/members/new' do
   erb(:"members/new")
 end
@@ -19,7 +21,7 @@ post '/members' do
 end
 
 
-
+#EDIT CLIENT
 get "/members/:id/edit" do
   @member = Member.find(params[:id])
   erb(:"members/edit")
@@ -28,5 +30,12 @@ end
 post '/members/:id' do
   member = Member.new(params)
   member.update
+  redirect ('/members')
+end
+
+#DELETE CLIENT
+post '/members/:id/delete' do
+  member = Member.find(params[:id])
+  member.delete()
   redirect ('/members')
 end

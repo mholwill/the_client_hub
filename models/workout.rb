@@ -59,6 +59,14 @@ class Workout
     SqlRunner.run(sql)
   end
 
+  def self.find(id)
+   sql = "SELECT * FROM workouts WHERE id = $1"
+   values = [id]
+   workout = SqlRunner.run(sql, values)
+   result = Workout.new(workout.first)
+   return result
+ end
+
 
   def self.map_items(workout_data)
     result = workout_data.map { |workout| Workout.new(workout) }

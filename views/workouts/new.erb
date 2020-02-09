@@ -1,0 +1,30 @@
+<h1>CREATE A NEW CLASS</h1>
+
+<form action="/workouts" method="post">
+  <label for="workout-name">What is the class called?</label>
+    <input id = "workout-name" type="text" name="name" value="">
+  <br>
+  <br>
+  <label for="workout-type">What type of class is it?</label>
+    <select id="workout-type" name="type">
+      <option value="HIIT">HIIT</option>
+      <option value="Strength and Conditioning">Strength and Conditioning</option>
+      <option value="Pilates">Pilates</option>
+    </select>
+  <br>
+  <br>
+  <label for="trainer">Who is running the class?</label>
+    <select id="trainer" name="trainer">
+      <option value="Charlotte">Charlotte</option>
+      <option value="Ryan">Ryan</option>
+      <option value="Davy">Davy</option>
+      <option value="Craig">Craig</option>
+    </select>
+  <br>
+  <br>
+  <label for="capacity">How many can take part?</label>
+    <input id="capacity" type="text" name="capacity" value="">
+  <br>
+  <br>
+  <input type="submit" value="Create Workout">
+</form>
