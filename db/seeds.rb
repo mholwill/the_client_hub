@@ -111,5 +111,5 @@ booking4 = Booking.new({
   })
 booking4.save()
 
-binding.pry
-nil
+# binding.pry
+# nil
