@@ -7,3 +7,13 @@ get '/members' do
   @members = Member.all
   erb(:"members/index")
 end
+
+get '/members/new' do
+  erb(:"members/new")
+end
+
+post '/members' do
+  order = Member.new(params)
+  order.save()
+  redirect ('/members')
+end

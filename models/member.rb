@@ -1,3 +1,4 @@
+# require('date')
 require_relative('../db/sql_runner')
 
 class Member
@@ -46,6 +47,11 @@ class Member
     values = [@first_name, @last_name, @age, @goal, @id]
     SqlRunner.run(sql,values)
   end
+
+# def age(dob)
+#   now = Time.now.utc.to_date
+#   now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+# end
 
   def self.all()
     sql = "SELECT * FROM members"
