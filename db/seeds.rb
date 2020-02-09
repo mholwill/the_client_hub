@@ -51,33 +51,37 @@ member6 = Member.new({
   })
 member6.save()
 
-  workout1 = Workout.new({
-      "name" => "Fit in 30",
-      "type" => "HIIT",
-      "trainer" => "Craig",
-      "capacity" => 8
-    })
+workout1 = Workout.new({
+    "name" => "Fit in 30",
+    "type" => "HIIT",
+    "trainer" => "Craig",
+    "capacity" => 8
+  })
+workout1.save()
 
-  workout2 = Workout.new({
-      "name" => "Olympic Lifts",
-      "type" => "Strength and Conditioning",
-      "trainer" => "Davy",
-      "capacity" => 2
-    })
+workout2 = Workout.new({
+    "name" => "Olympic Lifts",
+    "type" => "Strength and Conditioning",
+    "trainer" => "Davy",
+    "capacity" => 2
+  })
+workout2.save()
 
-  workout3 = Workout.new({
-      "name" => "Boxercise",
-      "type" => "HIIT",
-      "trainer" => "Ryan",
-      "capacity" => 8
-    })
+workout3 = Workout.new({
+    "name" => "Boxercise",
+    "type" => "HIIT",
+    "trainer" => "Ryan",
+    "capacity" => 8
+  })
+workout3.save()
 
-  workout4 = Workout.new({
-      "name" => "Energy Flow",
-      "type" => "Pilates",
-      "trainer" => "Charlotte",
-      "capacity" => 6
-    })
+workout4 = Workout.new({
+    "name" => "Energy Flow",
+    "type" => "Pilates",
+    "trainer" => "Charlotte",
+    "capacity" => 6
+  })
+workout4.save()
 
   booking1 = Booking.new({
       "workout_id" => workout1.id,
