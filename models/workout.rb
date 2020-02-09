@@ -30,6 +30,13 @@ class Workout
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM workouts"
+    workouts = SqlRunner.run(sql)
+    return Workout.map_items(workouts)
+
+  end
+
   def self.delete_all
     sql = "DELETE FROM workouts"
     SqlRunner.run(sql)

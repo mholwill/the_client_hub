@@ -26,6 +26,12 @@ class Booking
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM bookings"
+    bookings = SqlRunner.run(sql)
+    return Booking.map_items(bookings)
+  end
+
   def self.delete_all
     sql = "DELETE FROM bookings"
     SqlRunner.run(sql)
