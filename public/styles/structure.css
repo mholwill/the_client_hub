@@ -1,3 +1,8 @@
 body {
-  
+  background-color: #F7F7FF;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #495867;
 }
