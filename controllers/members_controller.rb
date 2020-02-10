@@ -20,6 +20,12 @@ post '/members' do
   redirect ('/members')
 end
 
+get '/members/:id' do
+  @member = Member.find(params[:id])
+  erb(:"members/show")
+end
+
+
 
 #EDIT CLIENT
 get "/members/:id/edit" do

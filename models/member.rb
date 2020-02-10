@@ -65,10 +65,10 @@ class Member
     return Workout.map_items(workout)
   end
 
-def self.age_calculator(dob)
-  now = Time.now.utc.to_date
-  now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
-end
+# def age_calculator()
+#   now = Time.now.utc.to_date
+#   now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+# end
 
   def self.all()
     sql = "SELECT * FROM members"

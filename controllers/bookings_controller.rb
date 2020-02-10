@@ -1,4 +1,5 @@
 require( 'sinatra' )
+require( 'pry' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/booking.rb' )
 require_relative( '../models/member.rb' )
@@ -8,4 +9,17 @@ also_reload( '../models/*' )
 
 get '/bookings' do
   erb(:"bookings/index")
+end
+
+get '/bookings/new/:member_id' do
+  @member = Member.find(params[:member_id])
+  @workout = Workout.all()
+  erb(:"bookings/new")
+end
+
+post '/bookings/:member_id' do
+  @member = Member.find(params[:member_id])
+  @booking = Booking.new(params)
+  @booking.save()
+  erb(:"bookings/confirm_booking")
 end
