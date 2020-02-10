@@ -1,1 +1,11 @@
-<h1>TEST BOOKINGS</h1>
+<h1>ALL BOOKINGS</h1>
+
+
+<% @bookings.each do |booking| %>
+  <p>Member: <a href="members/<%= booking.members.id%>"<%= booking.members.first_name %> <%= booking.members.last_name %></a></p>
+  <p>Workout: <%= booking.workouts.name %></p>
+   <form method="post" action="/bookings/<%= booking.id %>/delete" >
+     <input type="submit" value="Delete Booking">
+   </form>
+  <hr />
+<% end %>

@@ -8,6 +8,9 @@ also_reload( '../models/*' )
 
 
 get '/bookings' do
+  @bookings = Booking.all()
+  @member = Member.all()
+  @workout = Workout.all()
   erb(:"bookings/index")
 end
 
@@ -22,4 +25,10 @@ post '/bookings/:member_id' do
   @booking = Booking.new(params)
   @booking.save()
   erb(:"bookings/confirm_booking")
+end
+
+post '/bookings/:id/delete' do
+  booking = Booking.find(params[:id])
+  booking.delete()
+  redirect ('/bookings')
 end
