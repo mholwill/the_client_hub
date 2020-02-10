@@ -4,7 +4,8 @@
 
 <ul>
   <% @member.workouts_booked.each do |workout| %>
-  <li><%= workout.name %></li>
-  <li><%= workout.type %></li>
+    <li>Name of workout: <%= workout.name %></li>
+    <li>Type of workout: <%= workout.type %></li>
+  <hr />
   <% end %>
 </ul>

@@ -4,7 +4,12 @@ require_relative( '../models/member.rb' )
 also_reload( '../models/*' )
 
 get '/members' do
-  @members = Member.all
+  if params[:name_query]
+    @members = Member.search_by_name(params[:name_query])
+  else
+    @members = Member.all
+  end
+  # @members = Member.search_by_name(params[:search_by_name])
   erb(:"members/index")
 end
 

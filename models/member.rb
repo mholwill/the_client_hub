@@ -87,7 +87,19 @@ class Member
    member = SqlRunner.run(sql, values)
    result = Member.new(member.first)
    return result
- end
+  end
+
+  def self.search_by_name(name)
+   search_term = "%#{name.downcase()}%"
+   sql = "SELECT * FROM members
+   WHERE LOWER(first_name) LIKE $1
+   OR
+   LOWER(last_name) LIKE $1"
+   values = [search_term]
+   members = SqlRunner.run(sql, values)
+   return Member.map_items(members)
+  end
+
 
   def self.map_items(member_data)
     result = member_data.map { |member| Member.new(member) }
