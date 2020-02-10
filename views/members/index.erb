@@ -4,9 +4,11 @@
   <p>Name: <%= member.first_name %> <%= member.last_name %></p>
   <p>Age: <%= member.age %></p>
   <p>Goal: <%= member.goal %></p>
+   <p><a href="/members/<%= member.id %>/workouts">Workouts Booked</a></p>
    <p><a href="/members/<%= member.id %>/edit">Edit</a></p>
    <form method="post" action="/members/<%= member.id %>/delete" >
      <input type="submit" value="Delete Member">
    </form>
+   <p><a href="/bookings">Make a booking</a></p>
   <hr />
 <% end %>

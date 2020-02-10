@@ -55,6 +55,16 @@ class Member
     SqlRunner.run(sql,value)
   end
 
+  def workouts_booked()
+    sql = "SELECT workouts.* FROM workouts
+    INNER JOIN bookings ON
+    bookings.workout_id = workouts.id
+    WHERE member_id = $1"
+    value = [@id]
+    workout = SqlRunner.run(sql,value)
+    return Workout.map_items(workout)
+  end
+
 # def age(dob)
 #   now = Time.now.utc.to_date
 #   now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
