@@ -10,7 +10,7 @@ Member.delete_all()
 member1 = Member.new({
     "first_name" => "Malcolm",
     "last_name" => "Holwill",
-    "age" => 32,
+    "dob" => "1987/04/08",
     "goal" => "To build muscle"
   })
 member1.save()
@@ -18,7 +18,7 @@ member1.save()
 member2 = Member.new({
     "first_name" => "Charlie",
     "last_name" => "Bryce",
-    "age" => 28,
+    "dob" => "1991/01/08",
     "goal" => "Lose Weight"
   })
 member2.save()
@@ -26,7 +26,7 @@ member2.save()
 member3 = Member.new({
     "first_name" => "Graham",
     "last_name" => "Grahamson",
-    "age" => 21,
+    "dob" => "1975/10/04",
     "goal" => "To improve fitness"
   })
 member3.save()
@@ -34,7 +34,7 @@ member3.save()
 member4 = Member.new({
     "first_name" => "Robert",
     "last_name" => "Smith",
-    "age" => 52,
+    "dob" => "1993/08/10",
     "goal" => "To build muscle and stay fit"
   })
 member4.save()
@@ -42,7 +42,7 @@ member4.save()
 member5 = Member.new({
     "first_name" => "Alison",
     "last_name" => "Smith",
-    "age" => 57,
+    "dob" => "2002/12/12",
     "goal" => "To improve flexability and weightloss"
   })
 member5.save()
@@ -50,7 +50,7 @@ member5.save()
 member6 = Member.new({
     "first_name" => "Tommy",
     "last_name" => "Ryder",
-    "age" => 19,
+    "dob" => "1996/02/20",
     "goal" => "To build muscle"
   })
 member6.save()
@@ -59,7 +59,9 @@ workout1 = Workout.new({
     "name" => "Fit in 30",
     "type" => "HIIT",
     "trainer" => "Craig",
-    "capacity" => 8
+    "day_of_week" => "Monday",
+    "start_time" => "08:00:00",
+    "end_time" => "09:00:00"
   })
 workout1.save()
 
@@ -67,7 +69,9 @@ workout2 = Workout.new({
     "name" => "Olympic Lifts",
     "type" => "Strength and Conditioning",
     "trainer" => "Davy",
-    "capacity" => 2
+    "day_of_week" => "Monday",
+    "start_time" => "19:00:00",
+    "end_time" => "20:00:00"
   })
 workout2.save()
 
@@ -75,7 +79,9 @@ workout3 = Workout.new({
     "name" => "Boxercise",
     "type" => "HIIT",
     "trainer" => "Ryan",
-    "capacity" => 8
+    "day_of_week" => "Wednesday",
+    "start_time" => "06:30:00",
+    "end_time" => "08:00:00"
   })
 workout3.save()
 
@@ -83,7 +89,9 @@ workout4 = Workout.new({
     "name" => "Energy Flow",
     "type" => "Pilates",
     "trainer" => "Charlotte",
-    "capacity" => 6
+    "day_of_week" => "Friday",
+    "start_time" => "13:00:00",
+    "end_time" => "14:00:00"
   })
 workout4.save()
 
@@ -111,5 +119,5 @@ booking4 = Booking.new({
   })
 booking4.save()
 
-binding.pry
-nil
+# binding.pry
+# nil

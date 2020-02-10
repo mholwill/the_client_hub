@@ -5,7 +5,8 @@
   <p>Name: <%= workout.name %></p>
   <p>Type: <%= workout.type %></p>
   <p>Trainer: <%= workout.trainer %></p>
-  <p>Capacity: <%= workout.capacity %></p>
+  <p>Day of the week: <%= workout.day_of_week %></p>
+  <p>Time: <%= workout.start_time %> to <%= workout.end_time %></p>
   <p><a href="/workouts/<%= workout.id %>/edit">Edit Class</a></p>
   <p><a href="/workouts/<%= workout.id %>/members">Members taking part</a></p>
   <form method="post" action="/workouts/<%= workout.id %>/delete" >

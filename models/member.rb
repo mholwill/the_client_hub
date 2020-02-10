@@ -1,16 +1,16 @@
-# require('date')
+require 'date'
 require_relative('../db/sql_runner')
 
 class Member
 
   attr_reader :id
-  attr_accessor :first_name, :last_name, :age, :goal
+  attr_accessor :first_name, :last_name, :dob, :goal
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @first_name = options['first_name']
     @last_name = options['last_name']
-    @age = options['age'].to_i
+    @dob = options['dob']
     @goal = options['goal']
   end
 
@@ -19,7 +19,7 @@ class Member
     (
       first_name,
       last_name,
-      age,
+      dob,
       goal
     )
     VALUES
@@ -27,7 +27,7 @@ class Member
       $1, $2, $3, $4
     )
     RETURNING id"
-    values = [@first_name, @last_name, @age, @goal]
+    values = [@first_name, @last_name, @dob, @goal]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -37,14 +37,14 @@ class Member
     SET (
       first_name,
       last_name,
-      age,
+      dob,
       goal
     )
     =
     (
       $1, $2, $3, $4
     ) WHERE id = $5"
-    values = [@first_name, @last_name, @age, @goal, @id]
+    values = [@first_name, @last_name, @dob, @goal, @id]
     SqlRunner.run(sql,values)
   end
 
@@ -65,10 +65,11 @@ class Member
     return Workout.map_items(workout)
   end
 
-# def age_calculator()
-#   now = Time.now.utc.to_date
-#   now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
-# end
+  # def age_calculator(dob)
+  #   dob = [@dob]
+  #   now = Time.now.utc.to_date
+  #   now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+  # end
 
   def self.all()
     sql = "SELECT * FROM members"

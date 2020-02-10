@@ -3,14 +3,16 @@ require_relative('../db/sql_runner')
 class Workout
 
     attr_reader :id
-    attr_accessor :name, :type, :trainer, :capacity
+    attr_accessor :name, :type, :trainer, :day_of_week, :start_time, :end_time
 
   def initialize(options)
     @id = options['id'] if options['id']
     @name = options['name']
     @type = options['type']
     @trainer = options['trainer']
-    @capacity = options['capacity'].to_i
+    @day_of_week = options['day_of_week']
+    @start_time = options['start_time']
+    @end_time = options['end_time']
   end
 
   def save()
@@ -19,14 +21,16 @@ class Workout
       name,
       type,
       trainer,
-      capacity
+      day_of_week,
+      start_time,
+      end_time
     )
     VALUES
     (
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5, $6
     )
     RETURNING id"
-    values = [@name, @type, @trainer, @capacity]
+    values = [@name, @type, @trainer, @day_of_week, @start_time, @end_time]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -37,13 +41,15 @@ class Workout
       name,
       type,
       trainer,
-      capacity
+      day_of_week,
+      start_time,
+      end_time
     )
     =
     (
-      $1, $2, $3, $4
-    ) WHERE id = $5"
-    values = [@name, @type, @trainer, @capacity, @id]
+      $1, $2, $3, $4, $5, $6
+    ) WHERE id = $7"
+    values = [@name, @type, @trainer, @day_of_week, @start_time, @end_time, @id]
     SqlRunner.run(sql,values)
   end
 
