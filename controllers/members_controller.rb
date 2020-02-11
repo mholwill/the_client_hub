@@ -1,5 +1,6 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
+include FileUtils::Verbose
 require_relative( '../models/member.rb' )
 also_reload( '../models/*' )
 
@@ -28,6 +29,16 @@ end
 get '/members/:id' do
   @member = Member.find(params[:id])
   erb(:"members/show")
+end
+
+post '/members/:id' do
+    tempfile = params[:file][:tempfile]
+    filename = params[:file][:filename]
+    cp(tempfile.path, "public/images/#{filename}")
+    member = Member.find(params[:id])
+    member.image = filename
+    member.update
+    redirect("/members/#{params[:id]}")
 end
 
 

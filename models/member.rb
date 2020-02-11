@@ -4,7 +4,7 @@ require_relative('../db/sql_runner')
 class Member
 
   attr_reader :id
-  attr_accessor :first_name, :last_name, :dob, :goal
+  attr_accessor :first_name, :last_name, :dob, :goal, :image
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -12,6 +12,7 @@ class Member
     @last_name = options['last_name']
     @dob = options['dob']
     @goal = options['goal']
+    @image = options['image']
   end
 
   def save()
@@ -20,14 +21,15 @@ class Member
       first_name,
       last_name,
       dob,
-      goal
+      goal,
+      image
     )
     VALUES
     (
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5
     )
     RETURNING id"
-    values = [@first_name, @last_name, @dob, @goal]
+    values = [@first_name, @last_name, @dob, @goal, @image]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -38,13 +40,14 @@ class Member
       first_name,
       last_name,
       dob,
-      goal
+      goal,
+      image
     )
     =
     (
-      $1, $2, $3, $4
-    ) WHERE id = $5"
-    values = [@first_name, @last_name, @dob, @goal, @id]
+      $1, $2, $3, $4, $5
+    ) WHERE id = $6"
+    values = [@first_name, @last_name, @dob, @goal, @image, @id]
     SqlRunner.run(sql,values)
   end
 

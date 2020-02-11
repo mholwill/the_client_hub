@@ -7,7 +7,8 @@ CREATE TABLE members (
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   dob DATE,
-  goal VARCHAR(255)
+  goal VARCHAR(255),
+  image VARCHAR(255)
 );
 
 CREATE TABLE workouts (

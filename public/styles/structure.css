@@ -1,5 +1,6 @@
-body {
-  background-color: #F7F7FF;
+body, html {
+  height: 100%;
+  padding-top: 3em;
 }
 
 h1, h2, h3 {
@@ -9,16 +10,22 @@ h1, h2, h3 {
 
 nav {
   text-align: center;
-  background-color: #BDD5EA;
-  overflow: auto;
-  white-space: nowrap;
+  background-color: #495867;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  position: fixed;
 }
 
 nav li{
  display: inline-block;
- color: white;
  text-align: center;
  padding: 14px;
+}
+
+nav li a{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
  text-decoration: none;
 }
 
@@ -35,11 +42,24 @@ nav li{
   text-align: center;
 }
 
-.login img{
+.login {
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
+.hero-image {
+  background-image: url("/images/Gym_image.jpg");
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 .show {
   display: flex;
   align-items: center;

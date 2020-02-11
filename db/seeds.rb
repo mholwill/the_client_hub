@@ -11,7 +11,8 @@ member1 = Member.new({
     "first_name" => "Malcolm",
     "last_name" => "Holwill",
     "dob" => "1987/04/08",
-    "goal" => "To build muscle"
+    "goal" => "To build muscle",
+    "image" => "IMG_5025.JPG"
   })
 member1.save()
 
@@ -19,7 +20,8 @@ member2 = Member.new({
     "first_name" => "Charlie",
     "last_name" => "Bryce",
     "dob" => "1991/01/08",
-    "goal" => "Lose Weight"
+    "goal" => "Lose Weight",
+    "image" => "IMG_5025.JPG"
   })
 member2.save()
 
@@ -27,7 +29,8 @@ member3 = Member.new({
     "first_name" => "Graham",
     "last_name" => "Grahamson",
     "dob" => "1975/10/04",
-    "goal" => "To improve fitness"
+    "goal" => "To improve fitness",
+    "image" => "IMG_5025.JPG"
   })
 member3.save()
 
@@ -35,7 +38,8 @@ member4 = Member.new({
     "first_name" => "Robert",
     "last_name" => "Smith",
     "dob" => "1993/08/10",
-    "goal" => "To build muscle and stay fit"
+    "goal" => "To build muscle and stay fit",
+    "image" => "IMG_5025.JPG"
   })
 member4.save()
 
@@ -43,7 +47,8 @@ member5 = Member.new({
     "first_name" => "Alison",
     "last_name" => "Smith",
     "dob" => "2002/12/12",
-    "goal" => "To improve flexability and weightloss"
+    "goal" => "To improve flexability and weightloss",
+    "image" => "IMG_5025.JPG"
   })
 member5.save()
 
@@ -51,7 +56,8 @@ member6 = Member.new({
     "first_name" => "Tommy",
     "last_name" => "Ryder",
     "dob" => "1996/02/20",
-    "goal" => "To build muscle"
+    "goal" => "To build muscle",
+    "image" => "IMG_5025.JPG"
   })
 member6.save()
 

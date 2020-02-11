@@ -1,8 +1,23 @@
 <div class="show">
 
 
-<img src="/images/Malcolm.jpg" alt="Malcolm" style="width: 200px">
+<img src="/images/<%= @member.image %>" />
+  <br>
+  <br>
+  <form action='/members/<%= @member.id %>' enctype="multipart/form-data" method='POST'>
+      <input name="file" type="file" />
+      <input type="submit" value="Upload" />
+  </form>
 
-<h1><%= @member.first_name %> <%= @member.last_name %></h1>
+  <h1><%= @member.first_name %> <%= @member.last_name %></h1>
+  <h2>Goal: <%= @member.goal %></h2>
+
+  <% @member.workouts_booked.each do |workout| %>
+    <li>Name of workout: <%= workout.name %></li>
+    <li>Type of workout: <%= workout.type %></li>
+  <hr />
+  <% end %>
+
+  <a href="/members">Back</a>
 
 </div>
