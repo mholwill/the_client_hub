@@ -23,6 +23,7 @@ end
 
 post '/members' do
   member = Member.new(params)
+  # binding.pry
   member.save()
   redirect ('/members')
 end

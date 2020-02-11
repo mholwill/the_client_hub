@@ -1,5 +1,5 @@
 body, html {
-  background-color: #F7F7FF;
+  /* background-color: #F7F7FF; */
   height: 100%;
   padding-top: 3em;
 }
@@ -33,7 +33,7 @@ nav li a{
 .home {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
@@ -45,6 +45,9 @@ nav li a{
 }
 
 .index {
+  background-color: #F7F7FF;
+  height: 100%:
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,14 +69,14 @@ nav li a{
   flex-wrap: wrap;
   border: 2px solid;
 }
-
+/*
 
 .login {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
+} */
 
 .hero-image {
   background-image: url("/images/Gym_image.jpg");
@@ -96,10 +99,10 @@ nav li a{
 .show img {
   margin-top: 3em;
   border-style: solid;
-  border-color: #BDD5EA;
+  border-color: #FE5F55;
   border-width: thick;
   border-radius: 150px;;
-  width: 200px;
+  width: 250px;
 }
 
 .warning-page {
@@ -129,6 +132,7 @@ nav li a{
   margin: 4px 2px;
   cursor: pointer;
   margin-top: 3em;
+  border-radius: 8px;
 }
 
 .warning-page a {

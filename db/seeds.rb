@@ -12,7 +12,7 @@ member1 = Member.new({
     "last_name" => "Holwill",
     "dob" => "1987/04/08",
     "goal" => "To build muscle",
-    "image" => "IMG_5025.JPG"
+    "image" => "avatar.png"
   })
 member1.save()
 
@@ -39,7 +39,7 @@ member4 = Member.new({
     "last_name" => "Smith",
     "dob" => "1993/08/10",
     "goal" => "To build muscle and stay fit",
-    "image" => "IMG_5025.JPG"
+    "image" => "avatar.png"
   })
 member4.save()
 
