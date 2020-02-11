@@ -82,3 +82,39 @@ nav li a{
   border-radius: 150px;
   width: 200px;
 }
+
+.warning-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.warning-page h1 {
+  color: #FE5F55;
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.warning-page input[type=submit]{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: #FE5F55;
+  border: solid;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 3em;
+}
+
+.warning-page a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: black;
+  text-decoration: underline;
+}

@@ -1,7 +1,14 @@
+<div class="warning-page">
+
 <h1>WARNING</h1>
 
-<h2>IF TYOU DELETE THIS MEMBER YOU WILL LOSE ALL OF THEIR DATA</h2>
+<h2>IF YOU DELETE THIS MEMBER ALL OF THEIR DATA WILL BE LOST</h2>
 
 <form method="post" action="/members/<%= @member.id %>/delete" >
   <input type="submit" value="Delete Member">
 </form>
+<br>
+<br>
+<a href="/members">Back</a>
+
+</div>
