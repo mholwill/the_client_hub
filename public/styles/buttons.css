@@ -16,13 +16,12 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
 .button-members {
   background-color: #F7F7FF;
-  text-transform: capitalize;
   border: none;
   color: black;
   padding: 16px 32px;
@@ -30,7 +29,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 10px 10px;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 8px;

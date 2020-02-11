@@ -5,3 +5,22 @@
 .hidden {
   visibility: hidden;
 }
+
+/* .new-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} */
+
+/* .form-image {
+background-image: url("/images/sign-up.jpg");
+height: auto;
+height: 1000px;
+width: auto;
+background-size: 500px;
+position: center fixed;
+top: 0;
+left: 0;
+z-index: -1;
+} */

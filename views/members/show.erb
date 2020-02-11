@@ -12,9 +12,10 @@
   <h1><%= @member.first_name %> <%= @member.last_name %></h1>
   <h2>Goal: <%= @member.goal %></h2>
 
+  <h3>Workouts booked</h3>
+
   <% @member.workouts_booked.each do |workout| %>
-    <li>Name of workout: <%= workout.name %></li>
-    <li>Type of workout: <%= workout.type %></li>
+    <li><%= workout.name %></li>
   <hr />
   <% end %>
 

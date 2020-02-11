@@ -2,9 +2,15 @@ body, html {
   /* background-color: #F7F7FF; */
   height: 100%;
   padding-top: 3em;
+  width: auto;
 }
 
 h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #495867;
+}
+
+li {
   font-family: 'Montserrat', sans-serif;
   color: #495867;
 }
@@ -15,7 +21,7 @@ nav {
   top: 0;
   left: 0;
   min-width: 100%;
-  position: fixed;
+  position: absolute;
 }
 
 nav li{
@@ -96,8 +102,19 @@ nav li a{
   flex-direction: column;
 }
 
+.show h1 {
+  font-size: 4em;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.show h2 {
+  font-size: 1.5em;
+  color: #FE5F55;
+}
+
 .show img {
-  margin-top: 3em;
+  margin-top: 1em;
   border-style: solid;
   border-color: #FE5F55;
   border-width: thick;
