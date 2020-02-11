@@ -57,10 +57,15 @@ post '/members/:id' do
 end
 
 #DELETE CLIENT
+get "/members/:id/delete" do
+  @member = Member.find(params[:id])
+  erb(:"members/delete")
+end
+
 post '/members/:id/delete' do
   member = Member.find(params[:id])
   member.delete()
-  redirect ('/members')
+  redirect ("/members")
 end
 
 get "/members/:id/workouts" do

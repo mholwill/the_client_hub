@@ -15,9 +15,7 @@
   <p>Goal: <%= member.goal %></p>
    <p><a href="/members/<%= member.id %>/workouts">Workouts Booked</a></p>
    <p><a href="/members/<%= member.id %>/edit">Edit</a></p>
-   <form method="post" action="/members/<%= member.id %>/delete" >
-     <input type="submit" value="Delete Member">
-   </form>
    <p><a href="/bookings/new/<%= member.id %>">Make a booking</a></p>
+   <p><a href="/members/<%= member.id %>/delete">Delete</a></p>
   <hr />
 <% end %>
