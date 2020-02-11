@@ -68,6 +68,19 @@ class Booking
    return result
  end
 
+ def self.search_booking(name)
+  search_term = "%#{name.downcase()}%"
+  sql = "SELECT members.* FROM members
+  INNER JOIN workouts ON workouts.id = $1
+  WHERE members.id = $2
+  WHERE LOWER(members.first_name) LIKE $3
+  OR
+  LOWER(members.last_name) LIKE $3"
+  values = [workout_id, member_id, search_term]
+  bookings = SqlRunner.run(sql, values)
+  return Booking.map_items(bookings)
+ end
+
 
   def self.map_items(booking_data)
     result = booking_data.map { |booking| Booking.new(booking) }

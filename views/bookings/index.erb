@@ -1,5 +1,5 @@
+<div class="show">
 <h1>ALL BOOKINGS</h1>
-
 
 <% @bookings.each do |booking| %>
   <p>Member: <a href="/members/<%= booking.members.id%>"><%=  booking.members.first_name %> <%= booking.members.last_name %></a></p>
@@ -9,3 +9,5 @@
    </form>
   <hr />
 <% end %>
+
+</div>

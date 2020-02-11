@@ -1,4 +1,5 @@
 require( 'sinatra' )
+require( 'pry' )
 require( 'sinatra/contrib/all' )
 include FileUtils::Verbose
 require_relative( '../models/member.rb' )
@@ -31,7 +32,7 @@ get '/members/:id' do
   erb(:"members/show")
 end
 
-post '/members/:id' do
+post '/members/:id/upload-image' do
     tempfile = params[:file][:tempfile]
     filename = params[:file][:filename]
     cp(tempfile.path, "public/images/#{filename}")
@@ -52,7 +53,7 @@ end
 post '/members/:id' do
   member = Member.new(params)
   member.update
-  redirect ('/members')
+  redirect ("/members")
 end
 
 #DELETE CLIENT

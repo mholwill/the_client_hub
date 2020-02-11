@@ -4,7 +4,7 @@
 <img src="/images/<%= @member.image %>" />
   <br>
   <br>
-  <form action='/members/<%= @member.id %>' enctype="multipart/form-data" method='POST'>
+  <form action='/members/<%= @member.id %>/upload-image' enctype="multipart/form-data" method='POST'>
       <input name="file" type="file" />
       <input type="submit" value="Upload" />
   </form>
