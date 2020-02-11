@@ -1,6 +1,10 @@
+<div class="warning-page">
 <h1>CONFIRM BOOKING</h1>
 
 <h2>Name: <%= @member.first_name %> <%= @member.last_name %></h2>
 <p>Workout booked: <%= @booking.workouts.name %></p>
-
-<p><a href="/members">Back to Members</a></p>
+<p>Time: <%= @booking.workouts.day_of_week %> at <%=  @booking.workouts.start_time%> to <%= @booking.workouts.end_time %></p>
+<br>
+<br>
+<p class="button1"><a href="/members">Confirm</a></p>
+</div>

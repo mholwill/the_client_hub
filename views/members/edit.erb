@@ -17,7 +17,9 @@
     <input id = "goal" type="text" name="goal" value="<%= @member.goal %>" />
     <br>
     <br>
-    <label for="image">Cannot edit here</label>
-      <input id="image" type="" name="image" value="<%= @member.image %>">
+    <label class="hidden" for="image">Cannot edit here</label>
+      <input class="hidden" id="image" type="" name="image" value="<%= @member.image %>">
+      <br>
   <input type="submit" value="Update Member" />
+  
 </form>

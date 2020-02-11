@@ -1,4 +1,5 @@
 body, html {
+  background-color: #F7F7FF;
   height: 100%;
   padding-top: 3em;
 }
@@ -43,11 +44,29 @@ nav li a{
   font-size: 3em;
 }
 
-.index h1 {
+.index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.index h1, h2, p {
   font-family: 'Montserrat', sans-serif;
   color: #495867;
   text-align: center;
+  flex-wrap: wrap;
 }
+
+.index-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px solid;
+}
+
 
 .login {
   display: flex;
@@ -77,9 +96,9 @@ nav li a{
 .show img {
   margin-top: 3em;
   border-style: solid;
-  border-color: hotpink;
+  border-color: #BDD5EA;
   border-width: thick;
-  border-radius: 150px;
+  border-radius: 150px;;
   width: 200px;
 }
 
