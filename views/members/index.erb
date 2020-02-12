@@ -16,13 +16,13 @@
     <% @members.each do |member| %>
       <div class="index-table">
         <p><b>Name: <a href="/members/<%= member.id %>"><%=  member.first_name %> <%= member.last_name %></a></b></p>
-        <p>DOB: <%= member.dob %></p>
-        <p>Goal: <%= member.goal %></p>
+        <p><b>DOB:</b> <%= member.dob %></p>
+        <p><b>Goal:</b> <%= member.goal %></p>
 
       <div class="index-buttons">
         <button class="index-button-members1" type="button" onclick="location.href='/members/<%= member.id %>/workouts'">WORKOUTS BOOKED</button>
         <button class="index-button-members2" type="button" onclick="location.href='/members/<%= member.id %>/edit'">EDIT</button>
-        <button class="index-button-members2" type="button" onclick="location.href='/members/new/<%= member.id %>'">MAKE A BOOKING</button>
+        <button class="index-button-members2" type="button" onclick="location.href='/bookings/new/<%= member.id %>'">MAKE A BOOKING</button>
         <button class="index-button-members4" type="button" onclick="location.href='/members/<%= member.id %>/delete'">DELETE</button>
       </div>
       </div>

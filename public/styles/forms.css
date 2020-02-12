@@ -1,6 +1,4 @@
-.login form {
-  text-align: center;
-}
+
 
 .hidden {
   visibility: hidden;
@@ -24,3 +22,39 @@ top: 0;
 left: 0;
 z-index: -1;
 } */
+.form {
+  font-family: 'Montserrat', sans-serif;
+  color: #495867;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form input[type=text], select {
+  width: auto%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form input[type=submit] {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  width: auto;
+  background-color: #5ee987;
+  border: 2px solid #495867;
+  border-radius: 8px;
+  color: #495867;
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.form input[type=submit]:hover {
+  color: #F7F7FF;
+}
