@@ -1,7 +1,7 @@
 body, html {
   /* background-color: #F7F7FF; */
   height: 100%;
-  padding-top: 3em;
+  padding-top: 2.5em;
   width: auto;
 }
 
@@ -21,7 +21,7 @@ nav {
   top: 0;
   left: 0;
   min-width: 100%;
-  position: absolute;
+  position: fixed;
 }
 
 nav li{
@@ -51,29 +51,45 @@ nav li a{
 }
 
 .index {
-  background-color: #F7F7FF;
   height: 100%:
   top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 1em;
 }
 
-.index h1, h2, p {
+.index h1, h2{
   font-family: 'Montserrat', sans-serif;
   color: #495867;
   text-align: center;
-  flex-wrap: wrap;
 }
 
-.index-table {
+.workout-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+.index-table {
+  width: 20%;
+  background-color: #F7F7FF;
+  margin: 1em;
+  padding: 2em;
+  border: 2px solid #FE5F55;
+}
+
+.index-table p {
+  font-family: 'Montserrat', sans-serif;
+
+  color: #495867;
+  text-align: center;
   flex-direction: column;
-  flex-wrap: wrap;
-  border: 2px solid;
+  flex-wrap: nowrap;
 }
 /*
 

@@ -73,7 +73,7 @@ workout1.save()
 
 workout2 = Workout.new({
     "name" => "Olympic Lifts",
-    "type" => "Strength and Conditioning",
+    "type" => "Strength",
     "trainer" => "Davy",
     "day_of_week" => "Monday",
     "start_time" => "19:00:00",
@@ -85,7 +85,7 @@ workout3 = Workout.new({
     "name" => "Boxercise",
     "type" => "HIIT",
     "trainer" => "Ryan",
-    "day_of_week" => "Wednesday",
+    "day_of_week" => "Thursday",
     "start_time" => "06:30:00",
     "end_time" => "08:00:00"
   })

@@ -8,7 +8,7 @@
   <label for="workout-type">What type of class is it?</label>
     <select id="workout-type" name="type">
       <option value="HIIT" <%= "selected" if @workout.type == "HIIT" %>>HIIT</option>
-      <option value="Strength and Conditioning" <%= "selected" if @workout.type == "Strength and Conditioning" %>>Strength and Conditioning</option>
+      <option value="Strength and Conditioning" <%= "selected" if @workout.type == "Strength" %>>Strength</option>
       <option value="Pilates" <%= "selected" if @workout.type == "Pilates" %>>Pilates</option>
     </select>
   <br>

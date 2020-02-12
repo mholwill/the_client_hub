@@ -1,25 +1,26 @@
 <div class="index">
 
-<h1>MEMBERS</h1>
-  <form action="/members" method="get">
-    <input type="text" name="name_query" value="">
-    <input type="submit" value="Search">
-  </form>
-  <form action="/members" method="get">
-    <input type="submit" value="Clear Results">
-  </form>
-  <br>
+  <h1>MEMBERS</h1>
+    <form action="/members" method="get">
+      <input type="text" name="name_query" value="">
+      <input type="submit" value="Search">
+    </form>
+    <form action="/members" method="get">
+      <input type="submit" value="Clear Results">
+    </form>
+    <br>
+
   <h2><a href="/members/new">Add a new member</a></h2>
 
-<% @members.each do |member| %>
-  <p>Name: <a href="/members/<%= member.id %>"><%= member.first_name %> <%= member.last_name %></a></p>
-  <p>DOB: <%= member.dob %></p>
-  <p>Goal: <%= member.goal %></p>
-   <p><a href="/members/<%= member.id %>/workouts">Workouts Booked</a></p>
-   <p><a href="/members/<%= member.id %>/edit">Edit</a></p>
-   <p><a href="/bookings/new/<%= member.id %>">Make a booking</a></p>
-   <p><a href="/members/<%= member.id %>/delete">Delete</a></p>
-  <hr />
-<% end %>
+  <% @members.each do |member| %>
+    <p>Name: <a href="/members/<%= member.id %>"><%=  member.first_name %> <%= member.last_name %></a></p>
+    <p>DOB: <%= member.dob %></p>
+    <p>Goal: <%= member.goal %></p>
+    <p><a href="/members/<%= member.id %>/workouts">Workouts Booked</a></p>
+     <p><a href="/members/<%= member.id %>/edit">Edit</a></p>
+     <p><a href="/bookings/new/<%= member.id %>">Make a booking</a></p>
+     <p><a href="/members/<%= member.id %>/delete">Delete</a></p>
+    <hr />
+  <% end %>
 
 </div>

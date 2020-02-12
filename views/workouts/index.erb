@@ -2,21 +2,27 @@
   <h1>WORKOUTS</h1>
   <h2><a href="/workouts/new">Add a new class</a></h2>
 
-  <div class="index-table">
+  <!-- <div class="index-table"> -->
+  <div class="workout-container">
     <% @workouts.each do |workout| %>
-      <p>Name: <%= workout.name %></p><br>
-      <p>Type: <%= workout.type %></p><br>
-      <p>Trainer: <%= workout.trainer %></p><br>
-      <p>Day of the week: <%= workout.day_of_week %></p><br>
-      <p>Time: <%= workout.start_time %> to <%= workout.end_time %></p><br>
+      <div class="index-table">
+      <p>Name: <%= workout.name %></p>
+      <p>Type: <%= workout.type %></p>
+      <p>Trainer: <%= workout.trainer %></p>
+      <p>Day of the week: <%= workout.day_of_week %></p>
+      <p>Time: <%= workout.start_time %> to <%= workout.end_time %></p>
+
       <div class="index-buttons">
         <p><a href="/workouts/<%= workout.id %>/edit">Edit Class</a></p><br>
         <p><a href="/workouts/<%= workout.id %>/members">Members taking part</a></p><br>
+
         <form method="post" action="/workouts/<%= workout.id %>/delete" >
           <input type="submit" value="Delete Workout">
         </form><br>
+
       </div>
-      <hr />
+      </div>
     <% end %>
-    </div>
+  </div>
+    <!-- </div> -->
 </div>
