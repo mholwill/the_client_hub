@@ -76,7 +76,7 @@ class Member
   # end
 
   def self.all()
-    sql = "SELECT * FROM members"
+    sql = "SELECT * FROM members ORDER BY last_name ASC"
     members= SqlRunner.run(sql)
     return Member.map_items(members)
   end

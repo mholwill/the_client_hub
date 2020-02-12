@@ -14,6 +14,10 @@ get '/bookings' do
   erb(:"bookings/index")
 end
 
+get '/bookings/new' do
+  erb(:"bookings/new")
+end
+
 get '/bookings/new/:member_id' do
   @member = Member.find(params[:member_id])
   @workout = Workout.all()
