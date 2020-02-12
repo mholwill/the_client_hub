@@ -1,16 +1,21 @@
-<div class="show">
+<div class="index">
 <h1>ALL BOOKINGS</h1>
 
-<% @bookings.each do |booking| %>
-  <p>Member: <a href="/members/<%= booking.members.id%>"><%=  booking.members.first_name %> <%= booking.members.last_name %></a></p>
-  <p>Workout: <%= booking.workouts.name %></p>
-  <p>Day: <%= booking.workouts.day_of_week %></p>
-  <p>Time: <%= booking.workouts.start_time %> to <%= booking.workouts.end_time %></p>
+  <div class="workout-container">
+    <% @bookings.each do |booking| %>
+    <div class="index-table">
+      <p>Member: <a href="/members/<%= booking.members.id%>"><%=  booking.members.first_name %> <%= booking.members.last_name %></a></p>
+      <p>Workout: <%= booking.workouts.name %></p>
+      <p>Day: <%= booking.workouts.day_of_week %></p>
+      <p>Time: <%= booking.workouts.start_time %> to <%= booking.workouts.end_time %></p>
 
-   <form method="post" action="/bookings/<%= booking.id %>/delete" >
-     <input type="submit" value="Delete Booking">
-   </form>
-  <hr />
-<% end %>
-
+      <div class="index-buttons">
+       <form method="post" action="/bookings/<%= booking.id %>/delete" >
+         <input type="submit" value="Delete Booking">
+       </form>
+      <hr />
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>

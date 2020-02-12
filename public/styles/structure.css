@@ -60,17 +60,22 @@ nav li a{
   padding-top: 1em;
 }
 
-.index h1, h2{
+.index h1{
   font-family: 'Montserrat', sans-serif;
   color: #495867;
   text-align: center;
+  font-size: 3.5em;
+  text-decoration: underline;
 }
+
+
 
 .workout-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-left: 5em;
   margin-right: 5em;
 }
@@ -79,8 +84,11 @@ nav li a{
   width: 20%;
   background-color: #F7F7FF;
   margin: 1em;
-  padding: 2em;
-  border: 2px solid #FE5F55;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border: 2px solid #fe9a93;
 }
 
 .index-table p {

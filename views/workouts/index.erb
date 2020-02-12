@@ -1,23 +1,23 @@
 <div class="index">
   <h1>WORKOUTS</h1>
-  <h2><a href="/workouts/new">Add a new class</a></h2>
+  <button class="new-button" type="button" onclick="location.href='/workouts/new'">ADD A NEW CLASS</button>
 
   <!-- <div class="index-table"> -->
   <div class="workout-container">
     <% @workouts.each do |workout| %>
       <div class="index-table">
-      <p>Name: <%= workout.name %></p>
-      <p>Type: <%= workout.type %></p>
-      <p>Trainer: <%= workout.trainer %></p>
-      <p>Day of the week: <%= workout.day_of_week %></p>
-      <p>Time: <%= workout.start_time %> to <%= workout.end_time %></p>
+      <p><b>Name: <%= workout.name %></b></p>
+      <p><b>Type:</b> <%= workout.type %></p>
+      <p><b>Trainer:</b> <%= workout.trainer %></p>
+      <p><b>Day of the week:</b> <%= workout.day_of_week %></p>
+      <p><b>Time:</b> <%= workout.start_time %> to <%= workout.end_time %></p>
 
       <div class="index-buttons">
-        <p><a href="/workouts/<%= workout.id %>/edit">Edit Class</a></p><br>
-        <p><a href="/workouts/<%= workout.id %>/members">Members taking part</a></p><br>
+        <button class="index-button-members1" type="button" onclick="location.href='/workouts/<%= workout.id %>/edit'">EDIT</button>
+        <button class="index-button-members2" type="button" onclick="location.href='/workouts/<%= workout.id %>/members'">MEMEBERS REGISTERED</button>
 
         <form method="post" action="/workouts/<%= workout.id %>/delete" >
-          <input type="submit" value="Delete Workout">
+          <input type="submit" value="DELETE">
         </form><br>
 
       </div>

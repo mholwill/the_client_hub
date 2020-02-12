@@ -1,26 +1,32 @@
 <div class="index">
 
   <h1>MEMBERS</h1>
-    <form action="/members" method="get">
-      <input type="text" name="name_query" value="">
-      <input type="submit" value="Search">
-    </form>
-    <form action="/members" method="get">
-      <input type="submit" value="Clear Results">
-    </form>
-    <br>
+  <button class="new-button" type="button" onclick="location.href='/members/new'">ADD A NEW MEMBER</button>
 
-  <h2><a href="/members/new">Add a new member</a></h2>
+  <form action="/members" method="get">
+    <input type="text" name="name_query" value="">
+    <input type="submit" value="Search">
+  </form>
+  <form action="/members" method="get">
+    <input type="submit" value="Clear Results">
+  </form>
 
-  <% @members.each do |member| %>
-    <p>Name: <a href="/members/<%= member.id %>"><%=  member.first_name %> <%= member.last_name %></a></p>
-    <p>DOB: <%= member.dob %></p>
-    <p>Goal: <%= member.goal %></p>
-    <p><a href="/members/<%= member.id %>/workouts">Workouts Booked</a></p>
-     <p><a href="/members/<%= member.id %>/edit">Edit</a></p>
-     <p><a href="/bookings/new/<%= member.id %>">Make a booking</a></p>
-     <p><a href="/members/<%= member.id %>/delete">Delete</a></p>
-    <hr />
-  <% end %>
+  <br>
+  <div class="workout-container">
+    <% @members.each do |member| %>
+      <div class="index-table">
+        <p><b>Name: <a href="/members/<%= member.id %>"><%=  member.first_name %> <%= member.last_name %></a></b></p>
+        <p>DOB: <%= member.dob %></p>
+        <p>Goal: <%= member.goal %></p>
+
+      <div class="index-buttons">
+        <button class="index-button-members1" type="button" onclick="location.href='/members/<%= member.id %>/workouts'">WORKOUTS BOOKED</button>
+        <button class="index-button-members2" type="button" onclick="location.href='/members/<%= member.id %>/edit'">EDIT</button>
+        <button class="index-button-members2" type="button" onclick="location.href='/members/new/<%= member.id %>'">MAKE A BOOKING</button>
+        <button class="index-button-members4" type="button" onclick="location.href='/members/<%= member.id %>/delete'">DELETE</button>
+      </div>
+      </div>
+    <% end %>
+  </div>
 
 </div>
