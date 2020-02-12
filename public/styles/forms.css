@@ -33,6 +33,7 @@ z-index: -1;
 }
 
 .form input[type=text], select {
+  font-family: 'Montserrat', sans-serif;
   width: auto%;
   padding: 12px 20px;
   margin: 8px 0;
