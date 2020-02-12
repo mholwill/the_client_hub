@@ -1,11 +1,15 @@
-<h1><%= @member.first_name %> <%= @member.last_name %></h1>
+  <h1><%= @member.first_name %> <%= @member.last_name %></h1>
 
-<h3>Workouts booked:</h3>
+  <h3>Workouts booked:</h3>
 
-<ul>
-  <% @member.workouts_booked.each do |workout| %>
-    <li>Name of workout: <%= workout.name %></li>
-    <li>Type of workout: <%= workout.type %></li>
-  <hr />
-  <% end %>
-</ul>
+  <ul>
+    <% @member.workouts_booked.each do |workout| %>
+      <li>Name of workout: <%= workout.name %></li>
+      <li>Type of workout: <%= workout.type %></li>
+    <hr />
+    <% end %>
+  </ul>
+  <br>
+<div class="show">
+  <a href="/members">Back</a>
+</div>
