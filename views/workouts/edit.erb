@@ -1,43 +1,46 @@
+<div class="new-page">
+
 <h1>Edit the class</h1>
 
-<form action="/workouts/<%= @workout.id %>" method="post">
-  <label for="workout-name">What is the class called?</label>
-    <input id = "workout-name" type="text" name="name" value="<%= @workout.name %>">
-  <br>
-  <br>
-  <label for="workout-type">What type of class is it?</label>
-    <select id="workout-type" name="type">
-      <option value="HIIT" <%= "selected" if @workout.type == "HIIT" %>>HIIT</option>
-      <option value="Strength and Conditioning" <%= "selected" if @workout.type == "Strength" %>>Strength</option>
-      <option value="Pilates" <%= "selected" if @workout.type == "Pilates" %>>Pilates</option>
-    </select>
-  <br>
-  <br>
-  <label for="trainer">Who is running the class?</label>
-    <select id="trainer" name="trainer">
-      <option value="Charlotte" <%= "selected" if @workout.trainer == "Charlotte" %>>Charlotte</option>
-      <option value="Ryan" <%= "selected" if @workout.trainer == "Ryan" %>>Ryan</option>
-      <option value="Davy" <%= "selected" if @workout.trainer == "Davy" %>>Davy</option>
-      <option value="Craig" <%= "selected" if @workout.trainer == "Craig" %>>Craig</option>
-    </select>
-  <br>
-  <br>
-  <label for="day-of-the-week">What day of the week?</label>
-    <select id="day-of-the-week" name="day_of_week">
-      <option value="Monday" <%= "selected" if @workout.day_of_week == "Monday" %>>Monday</option>
-      <option value="Tuesday" <%= "selected" if @workout.day_of_week == "Tuesday" %>>Tuesday</option>
-      <option value="Wednesday" <%= "selected" if @workout.day_of_week == "Wednesday" %>>Wednesday</option>
-      <option value="Thursday" <%= "selected" if @workout.day_of_week == "Thursday" %>>Thursday</option>
-      <option value="Friday" <%= "selected" if @workout.day_of_week == "Friday" %>>Friday</option>
-      <option value="Saturday" <%= "selected" if @workout.day_of_week == "Saturday" %>>Saturday</option>
-    </select>
-  <br>
-  <br>
-  <label for="start-time">Start Time:</label>
-    <input id = "start-time" type="time" name="start_time" value="<%= @workout.start_time %>" />
-  <br>
-  <br>
-    <label for="end-time">End Time:</label>
-      <input id = "end-time" type="time" name="end_time" value="<%= @workout.end_time %>" />
-  <input type="submit" value="Create Workout">
-</form>
+  <form class="form" action="/workouts/<%= @workout.id %>" method="post">
+    <label for="workout-name">What is the class called?</label>
+      <input id = "workout-name" type="text" name="name" value="<%= @workout.name %>">
+    <br>
+    <br>
+    <label for="workout-type">What type of class is it?</label>
+      <select id="workout-type" name="type">
+        <option value="HIIT" <%= "selected" if @workout.type == "HIIT" %>>HIIT</option>
+        <option value="Strength and Conditioning" <%= "selected" if @workout.type == "Strength" %>>Strength</option>
+        <option value="Pilates" <%= "selected" if @workout.type == "Pilates" %>>Pilates</option>
+      </select>
+    <br>
+    <br>
+    <label for="trainer">Who is running the class?</label>
+      <select id="trainer" name="trainer">
+        <option value="Charlotte" <%= "selected" if @workout.trainer == "Charlotte" %>>Charlotte</option>
+        <option value="Ryan" <%= "selected" if @workout.trainer == "Ryan" %>>Ryan</option>
+        <option value="Davy" <%= "selected" if @workout.trainer == "Davy" %>>Davy</option>
+        <option value="Craig" <%= "selected" if @workout.trainer == "Craig" %>>Craig</option>
+      </select>
+    <br>
+    <br>
+    <label for="day-of-the-week">What day of the week?</label>
+      <select id="day-of-the-week" name="day_of_week">
+        <option value="Monday" <%= "selected" if @workout.day_of_week == "Monday" %>>Monday</option>
+        <option value="Tuesday" <%= "selected" if @workout.day_of_week == "Tuesday" %>>Tuesday</option>
+        <option value="Wednesday" <%= "selected" if @workout.day_of_week == "Wednesday" %>>Wednesday</option>
+        <option value="Thursday" <%= "selected" if @workout.day_of_week == "Thursday" %>>Thursday</option>
+        <option value="Friday" <%= "selected" if @workout.day_of_week == "Friday" %>>Friday</option>
+        <option value="Saturday" <%= "selected" if @workout.day_of_week == "Saturday" %>>Saturday</option>
+      </select>
+    <br>
+    <br>
+    <label for="start-time">Start Time:</label>
+      <input id = "start-time" type="time" name="start_time" value="<%= @workout.start_time %>" />
+    <br>
+    <br>
+      <label for="end-time">End Time:</label>
+        <input id = "end-time" type="time" name="end_time" value="<%= @workout.end_time %>" />
+    <input type="submit" value="Create Workout">
+  </form>
+</div>
