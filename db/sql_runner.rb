@@ -5,6 +5,7 @@ class SqlRunner
 
   def self.run( sql, values = [] )
     begin
+      uri =  URI.parse(ENV["DATABASE_URL"])
       db = PG.connect({
           host: uri.host,
           dbname: uri.path[1..-1],
