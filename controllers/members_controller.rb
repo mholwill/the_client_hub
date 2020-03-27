@@ -1,5 +1,4 @@
 require( 'sinatra' )
-require( 'pry' )
 require( 'sinatra/contrib/all' )
 include FileUtils::Verbose
 require_relative( '../models/member.rb' )
@@ -23,7 +22,6 @@ end
 
 post '/members' do
   member = Member.new(params)
-  # binding.pry
   member.save()
   redirect ('/members')
 end

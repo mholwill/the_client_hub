@@ -1,4 +1,3 @@
-require('pry-byebug')
 require_relative('../models/member')
 require_relative('../models/workout')
 require_relative('../models/booking')
@@ -124,6 +123,3 @@ booking4 = Booking.new({
     "member_id" => member6.id
   })
 booking4.save()
-
-# binding.pry
-# nil
