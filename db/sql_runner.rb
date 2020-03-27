@@ -4,14 +4,18 @@ require('uri')
 class SqlRunner
 
   def self.run( sql, values = [] )
-    begin
+    if ENV["DATABASE_URL"]
       uri =  URI.parse(ENV["DATABASE_URL"])
-      db = PG.connect({
+      database_config = {
           host: uri.host,
           dbname: uri.path[1..-1],
           user: uri.user,
           password: uri.password
-         })
+         }
+       else
+         database_config = {host: "localhost", dbname: "gym_app"}
+    begin
+      db = PG.connect()
       db.prepare("query", sql)
       result = db.exec_prepared( "query", values )
     ensure
