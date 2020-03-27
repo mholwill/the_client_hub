@@ -14,6 +14,7 @@ class SqlRunner
          }
        else
          database_config = {host: "localhost", dbname: "gym_app"}
+       end
     begin
       db = PG.connect()
       db.prepare("query", sql)
