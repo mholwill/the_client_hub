@@ -10,7 +10,7 @@ BRIEF:
 - The app should show a list of all upcoming classes
 - The app should show all members that are registered for a particular class
 
-
+<img src:"public/images/Screenshot 2020-05-20 at 09.23.10.png/>
 
 
 To run the program:
