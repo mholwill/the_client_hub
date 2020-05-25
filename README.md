@@ -1,4 +1,17 @@
-E37 PROJECT RUBY
+THE CLIENT HUB
+
+A project set by CodeClan to help consolidate learning in Ruby and SQL. 
+
+BRIEF:
+
+- The app should allow the gym to create / edit / delete members
+- The app should allow the gym to create / edit / delete classes
+- The app should allow the gym to add members to specific classes
+- The app should show a list of all upcoming classes
+- The app should show all members that are registered for a particular class
+
+
+
 
 To run the program:
 

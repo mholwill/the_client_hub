@@ -13,12 +13,24 @@
 
   <br>
   <div class="workout-container">
+    <!-- This container needs to display all the informtation of the member and allow the user to navigate through the app to manipulate the relevant data. This will be done using RESTful routes. -->
+
+    <!-- for each member in the members models
+      print out members first_name
+      print our members last_name
+      print out members date of birth
+      print our members goal
+    end -->
+
+    <!-- Get each member from the database for the  -->
     <% @members.each do |member| %>
       <div class="index-table">
+        <!-- Print out every members first name and last, date of birth and their goal -->
         <p><b>Name: <a href="/members/<%= member.id %>"><%=  member.first_name %> <%= member.last_name %></a></b></p>
         <p><b>DOB:</b> <%= member.dob %></p>
         <p><b>Goal:</b> <%= member.goal %></p>
 
+      <!-- Create seperate buttons for the relevant RESTful routes -->
       <div class="index-buttons">
         <button class="index-button-members1" type="button" onclick="location.href='/members/<%= member.id %>/workouts'">WORKOUTS BOOKED</button>
         <button class="index-button-members2" type="button" onclick="location.href='/members/<%= member.id %>/edit'">EDIT</button>

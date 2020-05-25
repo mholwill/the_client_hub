@@ -2,7 +2,7 @@ require('pg')
 require('uri')
 
 class SqlRunner
-  
+
   def self.run( sql, values = [] )
     if ENV["DATABASE_URL"]
       uri = URI.parse(ENV["DATABASE_URL"])
@@ -13,7 +13,7 @@ class SqlRunner
         password: uri.password
         }
       else
-        database_config = {host: "localhost", dbname: "managym"}
+        database_config = {host: "localhost", dbname: "gym_app"}
       end
     begin
       db = PG.connect(database_config)
