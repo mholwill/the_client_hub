@@ -15,6 +15,10 @@ BRIEF:
 
 To run the program:
 
+You can try The Client Hub out on https://the-client-hub.herokuapp.com/
+
+You can also install it locally:
+
   Open terminal and create a database
     example: ' createdb the_client_hub '
 
